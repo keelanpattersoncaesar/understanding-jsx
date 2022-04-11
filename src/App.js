@@ -27,8 +27,14 @@ function App() {
     {
       name: "Molly's Evil Clone",
       type: "cat",
-      description: "Molly's Evil Clone is a little copycat cat who loves to stretch a lot!",
-      skills: ["getting the real Molly in trouble", "also play dead", "also meow", "also purr"],
+      description:
+        "Molly's Evil Clone is a little copycat cat who loves to stretch a lot!",
+      skills: [
+        "getting the real Molly in trouble",
+        "also play dead",
+        "also meow",
+        "also purr",
+      ],
       image:
         "https://res.cloudinary.com/atapas/image/upload/v1604829829/cats/timo-volz-ZlFKIG6dApg-unsplash_x3xifk.jpg",
     },
@@ -57,16 +63,16 @@ function App() {
             <li key={i}>
               <h1>{pet.name}</h1>
               <p>{pet.description}</p>
-              <img src={pet.image}
+              <img
+                src={pet.image}
                 alt={pet.name}
                 width="150px"
-                height="150px"/>
+                height="150px"
+              />
               <h3 className="skillsHeading">Skills:</h3>
               <ul className="skills">
                 {pet.skills.map((skill, i) => (
-                  <li key={i}>
-                    {skill}
-                  </li>
+                  <li key={i}>{skill}</li>
                 ))}
               </ul>
             </li>
